@@ -4,7 +4,7 @@ let url ="http://newsapi.org/v2/everything?q=technology&page="+page+"&apikey=d04
         let articles=[];
         let htm=""
         $.getJSON(url,function(data){
-            console.log(data.articles);
+            //console.log(data.articles);
             for(i=0;i<data.articles.length;i++){
                 myarticle(data.articles[i],i);
             }
@@ -29,7 +29,7 @@ let url ="http://newsapi.org/v2/everything?q=technology&page="+page+"&apikey=d04
                     let url ="http://newsapi.org/v2/everything?q=technology&page="+page+"&apikey=d04f7bfb12634d56905af9b7a82f845d";
                     page++;
                     $.getJSON(url,function(data){
-                        console.log(data.articles);
+                        //console.log(data.articles);
                         for(i=0;i<data.articles.length;i++){
                             myarticle(data.articles[i],i);
                         }
@@ -46,23 +46,25 @@ let url ="http://newsapi.org/v2/everything?q=technology&page="+page+"&apikey=d04
         function fullArticle(obj){
             
             page--;
-            console.log(page);
+            //console.log(page);
             url ="http://newsapi.org/v2/everything?q=technology&q="+obj+"&page="+page+"&apikey=d04f7bfb12634d56905af9b7a82f845d";
             //console.log(obj);
                 $.getJSON(url,function(data){
                     console.log(data);
                     for(i=0;i<data.articles.length;i++){
                        if(data.articles[i].url==obj.url){
-                           console.log(obj);
+                           //console.log(obj);
                            
                            var desc= obj.description;
                            var content= obj.content;
                            var img=obj.urlToImage;
                            document.getElementsByClassName('ui-loader ui-corner-all ui-body-a ui-loader-default')[0].style.display="none";
-                           htm="<img class='headimg' src='"+img+"><div class='title2'>"+obj.title+"</div><div class='description'>"+desc+"</div><div class='content'>"+content+"</div>";
+                           htm="<img class='headimg' src='"+img+"'/><div class='title2'>"+obj.title+"</div><div class='content'>"+content+"</div><a href="+obj.url+" class='link'>For Full Article Please Click Here!</a>";
                            document.getElementById('topics').innerHTML=htm;
-                           console.log(htm);
+                           
+                           //console.log(htm);
                         }
+        
                     }
                 })
                
