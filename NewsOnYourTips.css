@@ -1,0 +1,57 @@
+body{
+    font-family: comic sans ms;
+    background-color: rgb(100, 90, 90);
+    margin:0;
+}
+#header, #footer{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: rgb(163, 159, 159);
+    font-size: 2rem;
+}
+#footer{
+    position: fixed;
+}
+.wrap{
+    white-space: normal !important;
+}
+#detImg img{
+    width: 100%;
+}
+.items{
+    width: 100%;
+    height: 100px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+ul{
+    list-style: none;
+}
+.title{
+    vertical-align: centre;
+    font-size: 2rem;
+}
+.sameline{
+    display: inline-flex;
+    
+    background-color: rgb(26, 25, 25);
+    width: 100%;
+}
+.sameline:hover{
+    background-color: rgb(56, 55, 55);
+}
+a{
+    text-decoration: none;
+    color: rgb(163, 159, 159);
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    padding:0;
+}
